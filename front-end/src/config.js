@@ -1,19 +1,10 @@
-// ==============================|| THEME CONFIG  ||============================== //
-
 const config = {
+  // basename: only at build time to set, and Don't add '/' at end off BASENAME for breadcrumbs, also Don't put only '/' use blank('') instead,
+  // like '/berry-material-react/react/default'
+  basename: '/',
   defaultPath: '/dashboard/default',
-  fontFamily: `'Public Sans', sans-serif`,
-  i18n: 'en',
-  miniDrawer: false,
-  container: true,
-  mode: 'light',
-  presetColor: 'default',
-  themeDirection: 'ltr'
+  fontFamily: `'Roboto', sans-serif`,
+  borderRadius: 12
 };
 
 export default config;
-export const drawerWidth = 260;
-
-export const twitterColor = '#1DA1F2';
-export const facebookColor = '#3b5998';
-export const linkedInColor = '#0e76a8';

@@ -1,24 +1,22 @@
 // assets
-import { DashboardOutlined } from '@ant-design/icons';
+import { IconDashboard } from '@tabler/icons';
 
-// icons
-const icons = {
-  DashboardOutlined
-};
+// constant
+const icons = { IconDashboard };
 
-// ==============================|| MENU ITEMS - DASHBOARD ||============================== //
+// ==============================|| DASHBOARD MENU ITEMS ||============================== //
 
 const dashboard = {
-  id: 'group-dashboard',
-  title: 'Navigation',
+  id: 'dashboard',
+  title: 'Dashboard',
   type: 'group',
   children: [
     {
-      id: 'dashboard',
+      id: 'default',
       title: 'Dashboard',
       type: 'item',
       url: '/dashboard/default',
-      icon: icons.DashboardOutlined,
+      icon: icons.IconDashboard,
       breadcrumbs: false
     }
   ]
