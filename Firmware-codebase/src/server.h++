@@ -2,14 +2,14 @@
 #include "wifiCred.h++"
 #include "FS.h"
 #include "HTTPClient.h"
-#include <ArduinoJSON.h>
+#include <ArduinoJson.h>
 // Set web server port number to 80
 // WiFiServer server(80);
 
-String hostname = "GritMaker V1.0";
+const char *server = "40.112.165.245";
+int port = 8000;
 
 // Variable to store the HTTP request
-String header;
 
 int wifi_setup(){
   
@@ -42,38 +42,35 @@ int wifi_setup(){
     return 0;
 }
 
+void postRequest(int value, char* name, char* device_id){
+  StaticJsonDocument<200> doc;
+  doc["value"] = value;
+  doc["name"] = name;
+  doc["device_id"] = device_id;
 
-void clientHandle(){
- 
-}
+  // Serialize the JSON object to a string
+  String jsonStr;
+  serializeJson(doc, jsonStr);
 
-
-String httpGETRequest(String serverName) {
-
+  // Make a POST request
   HTTPClient http;
-    
-  // Your Domain name with URL path or IP address with path
-  http.begin(serverName);
-  
-  // If you need Node-RED/server authentication, insert user and password below
-  //http.setAuthorization("REPLACE_WITH_SERVER_USERNAME", "REPLACE_WITH_SERVER_PASSWORD");
-  
-  // Send HTTP POST request
-  int httpResponseCode = http.GET();
-  
-  String payload = "{}"; 
-  
-  if (httpResponseCode>0) {
+  http.begin("http://" + String(server) + ":" + String(port) + "/api/sensor_data/");
+  http.addHeader("Content-Type", "application/json");
+
+  int httpResponseCode = http.POST(jsonStr);
+
+  if (httpResponseCode > 0) {
     Serial.print("HTTP Response code: ");
     Serial.println(httpResponseCode);
-    payload = http.getString();
-  }
-  else {
-    Serial.print("Error code: ");
+
+    String response = http.getString();
+    Serial.println(response);
+  } else {
+    Serial.print("HTTP Request failed. Error code: ");
     Serial.println(httpResponseCode);
   }
-  // Free resources
+
   http.end();
 
-  return payload;
+  delay(5000); // Send every 5 seconds
 }
