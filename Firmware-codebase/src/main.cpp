@@ -3,10 +3,6 @@
 #include "server.h++"
 
 
-String serverName = "https://api.weather.gov/points";
-
-String applePark = "/37.3344481,-122.0082942";
-
 unsigned long lastTime = 0;
 // Timer set to 10 minutes (600000)
 // unsigned long timerDelay = 600000;
@@ -15,8 +11,8 @@ unsigned long timerDelay = 5000;
 
 void setup()
 {
-  Serial.begin(115200);
-  Serial.println("Serial Began");
+  Serial.begin(9600);
+  Serial.println("Serial Started");
 
   // WiFi Setup
   wifi_setup();
@@ -32,36 +28,6 @@ void setup()
 void loop()
 {
 
-  if (WiFi.status() == WL_CONNECTED)
-  {
-  HTTPClient http;
+postRequest(1, "yello-button", "John David");
 
-    // Serial.println(httpGETRequest(serverName));
-    String get_req_name = serverName + applePark;
-    // Serial.println(get_req_name);
-    // httpGETRequest("https://api.weather.gov/points/37.3344481,-122.0082942");
-  http.begin(serverName.c_str());
-
-  int httpResponseCode = http.GET();
-  String payload = "{}"; 
-  
-  if (httpResponseCode>0) {
-    Serial.print("HTTP Response code: ");
-    Serial.println(httpResponseCode);
-    payload = http.getString();
-  }
-  else {
-    Serial.print("Error code: ");
-    Serial.println(httpResponseCode);
-  }
-  Serial.print(payload);
-  // Free resources
-  http.end();
-  }
-  else {
-      Serial.println("WiFi Disconnected");
-    }
-  // clientHandle();
-
-  // nothing
 }
