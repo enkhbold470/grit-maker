@@ -1,3 +1,4 @@
+#include <Arduino.h>
 #include "led.h++"
 #include "server.h++"
 
@@ -30,16 +31,17 @@ void setup()
 
 void loop()
 {
-HTTPClient http;
 
   if (WiFi.status() == WL_CONNECTED)
   {
+  HTTPClient http;
 
     // Serial.println(httpGETRequest(serverName));
     String get_req_name = serverName + applePark;
     // Serial.println(get_req_name);
     // httpGETRequest("https://api.weather.gov/points/37.3344481,-122.0082942");
-  http.begin(get_req_name);
+  http.begin(serverName.c_str());
+
   int httpResponseCode = http.GET();
   String payload = "{}"; 
   
@@ -52,9 +54,13 @@ HTTPClient http;
     Serial.print("Error code: ");
     Serial.println(httpResponseCode);
   }
+  Serial.print(payload);
   // Free resources
   http.end();
   }
+  else {
+      Serial.println("WiFi Disconnected");
+    }
   // clientHandle();
 
   // nothing
