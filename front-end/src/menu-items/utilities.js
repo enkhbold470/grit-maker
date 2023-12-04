@@ -1,24 +1,15 @@
 // assets
-import {
-  AppstoreAddOutlined,
-  AntDesignOutlined,
-  BarcodeOutlined,
-  BgColorsOutlined,
-  FontSizeOutlined,
-  LoadingOutlined
-} from '@ant-design/icons';
+import { IconTypography, IconPalette, IconShadow, IconWindmill } from '@tabler/icons';
 
-// icons
+// constant
 const icons = {
-  FontSizeOutlined,
-  BgColorsOutlined,
-  BarcodeOutlined,
-  AntDesignOutlined,
-  LoadingOutlined,
-  AppstoreAddOutlined
+  IconTypography,
+  IconPalette,
+  IconShadow,
+  IconWindmill
 };
 
-// ==============================|| MENU ITEMS - UTILITIES ||============================== //
+// ==============================|| UTILITIES MENU ITEMS ||============================== //
 
 const utilities = {
   id: 'utilities',
@@ -29,30 +20,49 @@ const utilities = {
       id: 'util-typography',
       title: 'Typography',
       type: 'item',
-      url: '/typography',
-      icon: icons.FontSizeOutlined
+      url: '/utils/util-typography',
+      icon: icons.IconTypography,
+      breadcrumbs: false
     },
     {
       id: 'util-color',
       title: 'Color',
       type: 'item',
-      url: '/color',
-      icon: icons.BgColorsOutlined
+      url: '/utils/util-color',
+      icon: icons.IconPalette,
+      breadcrumbs: false
     },
     {
       id: 'util-shadow',
       title: 'Shadow',
       type: 'item',
-      url: '/shadow',
-      icon: icons.BarcodeOutlined
+      url: '/utils/util-shadow',
+      icon: icons.IconShadow,
+      breadcrumbs: false
     },
     {
-      id: 'ant-icons',
-      title: 'Ant Icons',
-      type: 'item',
-      url: '/icons/ant',
-      icon: icons.AntDesignOutlined,
-      breadcrumbs: false
+      id: 'icons',
+      title: 'Icons',
+      type: 'collapse',
+      icon: icons.IconWindmill,
+      children: [
+        {
+          id: 'tabler-icons',
+          title: 'Tabler Icons',
+          type: 'item',
+          url: '/icons/tabler-icons',
+          breadcrumbs: false
+        },
+        {
+          id: 'material-icons',
+          title: 'Material Icons',
+          type: 'item',
+          external: true,
+          target: '_blank',
+          url: 'https://mui.com/material-ui/material-icons/',
+          breadcrumbs: false
+        }
+      ]
     }
   ]
 };

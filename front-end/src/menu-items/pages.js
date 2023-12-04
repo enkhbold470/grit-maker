@@ -1,34 +1,41 @@
 // assets
-import { LoginOutlined, ProfileOutlined } from '@ant-design/icons';
+import { IconKey } from '@tabler/icons';
 
-// icons
+// constant
 const icons = {
-  LoginOutlined,
-  ProfileOutlined
+  IconKey
 };
 
-// ==============================|| MENU ITEMS - EXTRA PAGES ||============================== //
+// ==============================|| EXTRA PAGES MENU ITEMS ||============================== //
 
 const pages = {
-  id: 'authentication',
-  title: 'Authentication',
+  id: 'pages',
+  title: 'Pages',
+  caption: 'Pages Caption',
   type: 'group',
   children: [
     {
-      id: 'login1',
-      title: 'Login',
-      type: 'item',
-      url: '/login',
-      icon: icons.LoginOutlined,
-      target: true
-    },
-    {
-      id: 'register1',
-      title: 'Register',
-      type: 'item',
-      url: '/register',
-      icon: icons.ProfileOutlined,
-      target: true
+      id: 'authentication',
+      title: 'Authentication',
+      type: 'collapse',
+      icon: icons.IconKey,
+
+      children: [
+        {
+          id: 'login3',
+          title: 'Login',
+          type: 'item',
+          url: '/pages/login/login3',
+          target: true
+        },
+        {
+          id: 'register3',
+          title: 'Register',
+          type: 'item',
+          url: '/pages/register/register3',
+          target: true
+        }
+      ]
     }
   ]
 };
