@@ -7,3 +7,5 @@
 
 ### 2. run django  
 `python3 gritmaker/manage.py runserver 0.0.0.0:8000`
+if you want to run it in background: 
+`nohup python3 gritmaker/manage.py runserver 0.0.0.0:8000`
