@@ -14,7 +14,7 @@ fi
 
 # Deploy the built static files to the default Nginx directory on the server
 echo "Deploying static files to Nginx default directory on server (40.112.165.245)..."
-rsync -avz --delete-after ./out/ inky@40.112.165.245:/var/www/html
+scp -r ./out/ gritmaker@40.112.165.245:/var/www/html
 
 echo "Deployment completed successfully!"
 exit 0
