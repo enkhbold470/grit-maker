@@ -1,62 +1,36 @@
-<picture>
-  <source media="(prefers-color-scheme: dark)" srcset="https://user-images.githubusercontent.com/9113740/201498864-2a900c64-d88f-4ed4-b5cf-770bcb57e1f5.png">
-  <source media="(prefers-color-scheme: light)" srcset="https://user-images.githubusercontent.com/9113740/201498152-b171abb8-9225-487a-821c-6ff49ee48579.png">
-  <img alt="Shows all of the tools in the stack for this template, also listed in the README file." src="https://user-images.githubusercontent.com/9113740/201498152-b171abb8-9225-487a-821c-6ff49ee48579.png">
-</picture>
-
-<div align="center"><strong>Next.js 14 Admin Dashboard Template</strong></div>
-<div align="center">Built with the Next.js App Router</div>
-<br />
-<div align="center">
-<a href="http://admin-dash-template.vercel.sh/">Demo</a>
-<span> · </span>
-<a href="https://vercel.com/templates/next.js/admin-dashboard-tailwind-planetscale-react-nextjs">Clone & Deploy</a>
-<span>
-</div>
-
-## Overview
-
-This is a starter template using the following stack:
-
-- Framework - [Next.js 14](https://nextjs.org/14)
-- Language - [TypeScript](https://www.typescriptlang.org)
-- Auth - [NextAuth.js](https://next-auth.js.org)
-- Database - [Vercel Postgres](https://vercel.com/postgres)
-- Deployment - [Vercel](https://vercel.com/docs/concepts/next.js/overview)
-- Styling - [Tailwind CSS](https://tailwindcss.com)
-- Components - [Tremor](https://www.tremor.so)
-- Analytics - [Vercel Analytics](https://vercel.com/analytics)
-- Linting - [ESLint](https://eslint.org)
-- Formatting - [Prettier](https://prettier.io)
-
-This template uses the new Next.js App Router. This includes support for enhanced layouts, colocation of components, tests, and styles, component-level data fetching, and more.
+This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
 
 ## Getting Started
 
-During the deployment, Vercel will prompt you to create a new Postgres database. This will add the necessary environment variables to your project.
+First, run the development server:
 
-Inside the Vercel Postgres dashboard, create a table based on the schema defined in this repository.
-
-```
-CREATE TABLE users (
-  id SERIAL PRIMARY KEY,
-  email VARCHAR(255) NOT NULL,
-  name VARCHAR(255),
-  username VARCHAR(255)
-);
-```
-
-Insert a row for testing:
-
-```
-INSERT INTO users (id, email, name, username) VALUES (1, 'me@site.com', 'Me', 'username');
-```
-
-Finally, run the following commands to start the development server:
-
-```
-pnpm install
+```bash
+npm run dev
+# or
+yarn dev
+# or
 pnpm dev
+# or
+bun dev
 ```
 
-You should now be able to access the application at http://localhost:3000.
+Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+
+You can start editing the page by modifying `app/page.js`. The page auto-updates as you edit the file.
+
+This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-optimization) to automatically optimize and load Inter, a custom Google Font.
+
+## Learn More
+
+To learn more about Next.js, take a look at the following resources:
+
+- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
+- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+
+You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
+
+## Deploy on Vercel
+
+The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+
+Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
