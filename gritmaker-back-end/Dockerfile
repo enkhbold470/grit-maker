@@ -9,11 +9,11 @@ ENV TZ="America/Los_Angeles"
 
 WORKDIR /gritmaker-back-end/
 # Install dependencies:
-COPY . /gritmaker-back-end/
+COPY gritmaker/ /gritmaker-back-end/
+COPY requirements.txt /gritmaker-back-end/
 RUN python3 -m pip install -r requirements.txt
-RUN source venv/bin/activate
 # Run the application:
 # COPY main.py /app/
+RUN cd gritmaker
 RUN echo "NOW IT IS STARTED"
-CMD [ "python3", "/gritmaker/manage.py", "runserver"]
-
+CMD [ "python3", "./manage.py", "runserver", "0.0.0.0:8000" ]
