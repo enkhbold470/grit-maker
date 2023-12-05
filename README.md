@@ -31,14 +31,14 @@ GritMaker is a revolutionary educational tool inspired by Angela Duckworth's Gri
 
 
 ## Render Gallery
-<img src="Solidworks-CAD/render/gritmaker-render1.JPG" alt="GritMaker Logo" width="604" />
-<img src="Solidworks-CAD/render/gritmaker-render1.JPG" alt="GritMaker Logo" width="300" />
-<img src="Solidworks-CAD/render/gritmaker-render3.JPG" alt="GritMaker Logo" width="300"/>
+<img src="Solidworks-CAD/render/gritmaker-render1.JPG" alt="GritMaker Logo" width="504" />
+<img src="Solidworks-CAD/render/gritmaker-render1.JPG" alt="GritMaker Logo" width="250" />
+<img src="Solidworks-CAD/render/gritmaker-render3.JPG" alt="GritMaker Logo" width="250"/>
 
 ## PCB Layouts & Circuit
-<img src="images\pcb-layout.png" alt="GritMaker Logo" display= "flex" width="604" />
-<img src="images\pcb-3d.png" alt="GritMaker Logo" display= "flex" width="300" />
-<img src="images\circuit.png" alt="GritMaker Logo" display= "flex" width="300"/>
+<img src="images\pcb-layout.png" alt="GritMaker Logo" display= "flex" width="504" />
+<img src="images\pcb-3d.png" alt="GritMaker Logo" display= "flex" width="250" />
+<img src="images\circuit.png" alt="GritMaker Logo" display= "flex" width="250"/>
 
 ## How to Run
 
