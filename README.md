@@ -2,7 +2,7 @@
 
 GritMaker is a revolutionary educational tool inspired by Angela Duckworth's Grit book. It combines AI-driven classroom quiz automation with personalized learning experiences to cultivate grit in students.
 
-![GritMaker-image1](Solidworks-CAD\render\gritmaker-render0.JPG)
+![GritMaker-image1](Solidworks-CAD/render/gritmaker-render0.JPG)
 
 ## Technologies Used
 
@@ -31,14 +31,14 @@ GritMaker is a revolutionary educational tool inspired by Angela Duckworth's Gri
 
 
 ## Render Gallery
-<img src="Solidworks-CAD\render\gritmaker-render1.JPG" alt="GritMaker Logo" width="604" />
-<img src="Solidworks-CAD\render\gritmaker-render1.JPG" alt="GritMaker Logo" width="300" />
-<img src="Solidworks-CAD\render\gritmaker-render3.JPG" alt="GritMaker Logo" width="300"/>
+<img src="Solidworks-CAD/render/gritmaker-render1.JPG" alt="GritMaker Logo" width="604" />
+<img src="Solidworks-CAD/render/gritmaker-render1.JPG" alt="GritMaker Logo" width="300" />
+<img src="Solidworks-CAD/render/gritmaker-render3.JPG" alt="GritMaker Logo" width="300"/>
 
 ## PCB Layouts & Circuit
-<img src="images\pcb-layout.png" alt="GritMaker Logo" width="604" />
-<img src="images\pcb-3d.png" alt="GritMaker Logo" width="300" />
-<img src="images\circuit.png" alt="GritMaker Logo" width="300"/>
+<img src="images\pcb-layout.png" alt="GritMaker Logo" display= "flex" width="604" />
+<img src="images\pcb-3d.png" alt="GritMaker Logo" display= "flex" width="300" />
+<img src="images\circuit.png" alt="GritMaker Logo" display= "flex" width="300"/>
 
 ## How to Run
 
