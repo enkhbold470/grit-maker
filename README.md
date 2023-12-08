@@ -4,7 +4,6 @@ GritMaker is a revolutionary educational tool inspired by Angela Duckworth's Gri
 
 ![GritMaker-image1](Solidworks-CAD/render/gritmaker-render0.JPG)
 
-
 ## Technologies Used
 
 - **Languages:**
