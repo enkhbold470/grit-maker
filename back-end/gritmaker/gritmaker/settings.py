@@ -11,7 +11,9 @@ https://docs.djangoproject.com/en/2.2/ref/settings/
 """
 
 import os
-
+from dotenv import load_dotenv
+dotenv_path = os.path.join(os.path.dirname(__file__), '.env')
+load_dotenv(dotenv_path)  # loads the configs from .env
 # Build paths inside the project like this: os.path.join(BASE_DIR, ...)
 BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 
@@ -20,7 +22,15 @@ BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 # See https://docs.djangoproject.com/en/2.2/howto/deployment/checklist/
 
 # SECURITY WARNING: keep the secret key used in production secret!
-SECRET_KEY = ')3woasr!6+6in7!0^cz9k9+t#%f^+5_@wwir=&%0cymikcwd-3'
+SECRET_KEY = str(os.getenv('SECRET_KEY'))
+
+# social auth configs for github
+# SOCIAL_AUTH_GITHUB_KEY = str(os.getenv('GITHUB_KEY'))
+# SOCIAL_AUTH_GITHUB_SECRET = str(os.getenv('GITHUB_SECRET'))
+
+# # social auth configs for google
+# SOCIAL_AUTH_GOOGLE_OAUTH2_KEY = str(os.getenv('GOOGLE_KEY'))
+# SOCIAL_AUTH_GOOGLE_OAUTH2_SECRET = str(os.getenv('GOOGLE_SECRET'))
 
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = False
@@ -79,11 +89,11 @@ WSGI_APPLICATION = 'gritmaker.wsgi.application'
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.postgresql',
-        'NAME': 'gritmakerdb',
-        'USER': 'inky',
-        'PASSWORD': '}Ab}N^vLn7Z.+.>',
-        'HOST': '40.112.165.245',  # Set to your database host if it's not on localhost
-        'PORT': '5432',       # Set to your database port if it's not the default PostgreSQL port
+        'NAME': str(os.getenv('NAME')),
+        'USER': str(os.getenv('USER')),
+        'PASSWORD': str(os.getenv('PASSWORD')),
+        'HOST': str(os.getenv('HOST')),  # Set to your database host if it's not on localhost
+        'PORT': str(os.getenv('PORT')),       # Set to your database port if it's not the default PostgreSQL port
         # 'TIME_ZONE': 'PST',  # Set the time zone to UTC
     }
 }
