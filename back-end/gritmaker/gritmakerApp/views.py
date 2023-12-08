@@ -12,7 +12,6 @@ def sensor_data(request):
             value = data.get('value')
             name = data.get('name')
             device_id = data.get('device_id')
-
             if not value:
                 return JsonResponse({'status': 'error', 'message': 'Value is missing'})
             if not name or not device_id:
